@@ -1,0 +1,25 @@
+
+.for-you-page {
+    min-height: 100vh;
+    padding: 20px;
+  
+    .header {
+      margin-bottom: 30px;
+    }
+  
+    .main-content {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .song-listing {
+      padding-right: 20px;
+    }
+  
+    .player-sidebar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  

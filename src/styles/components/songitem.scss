@@ -1,0 +1,118 @@
+@import "../variables";
+
+.song-item {
+  display: flex;
+  align-items: center;
+  padding: $spacing-md;
+  border-radius: $border-radius-md;
+  margin-bottom: $spacing-sm;
+  cursor: pointer;
+  transition: all $transition-fast;
+  position: relative;
+  
+  &:hover {
+    background-color: rgba($light-color, 0.1);
+    
+    .song-number {
+      display: none;
+    }
+    
+    .play-icon {
+      display: block;
+    }
+  }
+  
+  &.active {
+    background-color: rgba($primary-color, 0.2);
+    
+    .song-title {
+      color: $primary-color;
+    }
+  }
+  
+  .song-left {
+    display: flex;
+    align-items: center;
+    width: 30px;
+    margin-right: $spacing-md;
+    
+    .song-number {
+      width: 100%;
+      text-align: center;
+      font-size: $font-size-sm;
+      color: $gray-color;
+    }
+    
+    .play-icon {
+      display: none;
+      color: $light-color;
+      font-size: 16px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  .song-thumbnail {
+    width: 40px;
+    height: 40px;
+    border-radius: $border-radius-xs;
+    margin-right: $spacing-md;
+    object-fit: cover;
+  }
+  
+  .song-info {
+    flex: 1;
+    
+    .song-title {
+      font-weight: 600;
+      margin: 0;
+      color: $light-color;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    .song-artist {
+      font-size: $font-size-sm;
+      color: $gray-color;
+      margin: $spacing-xs 0 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  
+  .song-duration {
+    margin-left: $spacing-md;
+    color: $gray-color;
+    font-size: $font-size-sm;
+  }
+  
+  .song-actions {
+    margin-left: $spacing-md;
+    
+    button {
+      background: none;
+      border: none;
+      color: $gray-color;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all $transition-fast;
+      padding: $spacing-xs;
+      
+      &:hover {
+        color: $light-color;
+      }
+      
+      &.favorite-btn.active {
+        color: #ff4081; // Pink color for favorite
+      }
+    }
+  }
+  
+  @media (max-width: $breakpoint-md) {
+    .song-duration {
+      display: none;
+    }
+  }
+}

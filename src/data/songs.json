@@ -1,0 +1,42 @@
+[
+    {
+      "id": 1,
+      "title": "Sawaar Loon",
+      "artistName": "Amit Trivedi, Monali Thakur",
+      "thumbnail": "https://pendujatt.com.se/uploads/album/lootera-amit-trivedi.webp",
+      "musicUrl": "https://v1.pendujatt.com.se/files/446415.mp3",
+      "duration": "4:40"
+    },
+    {
+      "id": 2,
+      "title": "Baby",
+      "artistName": "Justin Bieber",
+      "thumbnail": "https://lastfm.freetls.fastly.net/i/u/avatar170s/52d415566988332728c1c0c7fcc8c26d",
+      "musicUrl": "https://v1.pendujatt.com.se/files/563951.mp3",
+      "duration": "3:36"
+    },
+    {
+      "id": 3,
+      "title": "Mere Haath Mein ",
+      "artistName": "Sonu Nigam",
+      "thumbnail": "https://lastfm.freetls.fastly.net/i/u/avatar170s/927000ccb9524b45a368c7b8e9bffd48",
+      "musicUrl": "https://v1.pendujatt.com.se/files/34815.mp3",
+      "duration": "4:45"
+    },
+    {
+      "id": 4,
+      "title": "Chammak Challo",
+      "artistName": "Akon, Hamsika Iyer",
+      "thumbnail": "https://picsum.photos/200/200?random=4",
+      "musicUrl": "https://v1.pendujatt.com.se/files/126243.mp3",
+      "duration": "3:47"
+    },
+    {
+      "id": 5,
+      "title": "Sanam Teri Kasam",
+      "artistName": "Mohammed Irfan, Palak Muchhal",
+      "thumbnail": "https://pendujatt.com.se/uploads/album/sanam-teri-kasam-himesh-reshammiya.webp",
+      "musicUrl": "https://v1.pendujatt.com.se/files/121281.mp3",
+      "duration": "4:56"
+    }
+  ]

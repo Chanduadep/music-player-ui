@@ -1,0 +1,22 @@
+
+.search-bar {
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+  }
+  
+  .search-icon {
+    font-size: 16px;
+    color: #ddd;
+  }
+  
+  input {
+    background: rgba(255, 255, 255, 0.1);;
+    border: none;
+    color: white;
+  }
+  
+  input::placeholder {
+    color: black
+  }
+  
