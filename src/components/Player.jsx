@@ -57,7 +57,7 @@ const Player = () => {
   
   
 
-  //volume change
+  //volume 
   const handleVolumeChange = (e) => {
     const newVolume = parseFloat(e.target.value);
     setVolume(newVolume);
