@@ -108,9 +108,15 @@ export const PlayerProvider = ({ children }) => {
 
   // ⏱ Track time updates
   const handleTimeUpdate = () => {
-    setCurrentTime(audioRef.current.currentTime);
-    setDuration(audioRef.current.duration);
+    const audio = audioRef.current;
+    if (audio) {
+      const newTime = audio.currentTime;
+      const newDuration = audio.duration;
+      setCurrentTime((prev) => newTime);
+      setDuration(newDuration);
+    }
   };
+  
 
   const handleEnded = () => {
     playNext();

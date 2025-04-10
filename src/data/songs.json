@@ -5,7 +5,8 @@
       "artistName": "Amit Trivedi, Monali Thakur",
       "thumbnail": "https://pendujatt.com.se/uploads/album/lootera-amit-trivedi.webp",
       "musicUrl": "https://v1.pendujatt.com.se/files/446415.mp3",
-      "duration": "4:40"
+      "duration": "4:40",
+      "bgColor":"#3c2f28"
     },
     {
       "id": 2,
@@ -13,7 +14,8 @@
       "artistName": "Justin Bieber",
       "thumbnail": "https://lastfm.freetls.fastly.net/i/u/avatar170s/52d415566988332728c1c0c7fcc8c26d",
       "musicUrl": "https://v1.pendujatt.com.se/files/563951.mp3",
-      "duration": "3:36"
+      "duration": "3:36",
+      "bgColor":"#05378d"
     },
     {
       "id": 3,
@@ -21,7 +23,8 @@
       "artistName": "Sonu Nigam",
       "thumbnail": "https://lastfm.freetls.fastly.net/i/u/avatar170s/927000ccb9524b45a368c7b8e9bffd48",
       "musicUrl": "https://v1.pendujatt.com.se/files/34815.mp3",
-      "duration": "4:45"
+      "duration": "4:45",
+      "bgColor":"#637647"
     },
     {
       "id": 4,
@@ -29,7 +32,8 @@
       "artistName": "Akon, Hamsika Iyer",
       "thumbnail": "https://picsum.photos/200/200?random=4",
       "musicUrl": "https://v1.pendujatt.com.se/files/126243.mp3",
-      "duration": "3:47"
+      "duration": "3:47",
+      "bgColor":"#58584c"
     },
     {
       "id": 5,
@@ -37,6 +41,7 @@
       "artistName": "Mohammed Irfan, Palak Muchhal",
       "thumbnail": "https://pendujatt.com.se/uploads/album/sanam-teri-kasam-himesh-reshammiya.webp",
       "musicUrl": "https://v1.pendujatt.com.se/files/121281.mp3",
-      "duration": "4:56"
+      "duration": "4:56",
+      "bgColor":"#cf938d"
     }
   ]

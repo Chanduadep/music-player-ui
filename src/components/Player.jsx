@@ -1,8 +1,8 @@
-import React, { useContext, useState } from 'react';
-import { PlayerContext } from '../context/PlayerContext';
-import { ProgressBar } from 'react-bootstrap';
-import { formatTime } from '../utils/formatTime';
-import '../styles/components/player.scss';
+import React, { useContext, useState } from "react";
+import { PlayerContext } from "../context/PlayerContext";
+import { ProgressBar } from "react-bootstrap";
+import { formatTime } from "../utils/formatTime";
+import "../styles/components/player.scss";
 
 const Player = () => {
   const {
@@ -16,7 +16,8 @@ const Player = () => {
     playPrevious,
     setVolume,
     audioRef,
-    setCurrentTime
+    setCurrentTime,
+
   } = useContext(PlayerContext);
 
   const [isMuted, setIsMuted] = useState(false);
@@ -24,7 +25,6 @@ const Player = () => {
 
   // Calculate progress percentage
   const progress = duration ? (currentTime / duration) * 100 : 0;
-
 
   // Handle volume toggle
   const toggleMute = () => {
@@ -37,27 +37,30 @@ const Player = () => {
     setIsMuted(!isMuted);
   };
 
-  // progress bar 
+  // progress bar
   const handleProgressClick = (e) => {
     const progressBar = e.currentTarget;
     const rect = progressBar.getBoundingClientRect();
     const clickX = e.clientX - rect.left;
-  
+
     const duration = audioRef.current?.duration;
-  
-    if (audioRef.current && typeof duration === 'number' && !isNaN(duration) && isFinite(duration)) {
+
+    if (
+      audioRef.current &&
+      typeof duration === "number" &&
+      !isNaN(duration) &&
+      isFinite(duration)
+    ) {
       const newTime = (clickX / rect.width) * duration;
-  
+
       if (!isNaN(newTime) && isFinite(newTime)) {
         audioRef.current.currentTime = newTime;
         setCurrentTime(newTime); // Optionally update context state too
       }
     }
   };
-  
-  
 
-  //volume 
+  //volume
   const handleVolumeChange = (e) => {
     const newVolume = parseFloat(e.target.value);
     setVolume(newVolume);
@@ -65,12 +68,18 @@ const Player = () => {
   };
 
   return (
-    <div className="player-sidebar">
+    <div
+      className="player-sidebar"
+      style={{
+        backgroundColor: currentSong?.bgColor || "#1e1e1e",
+        transition: "background-color 0.5s ease",
+      }}
+    >
       <div className="player-content">
         {currentSong && (
           <div className="song-info">
-            <img 
-              src={currentSong.thumbnail} 
+            <img
+              src={currentSong.thumbnail}
               alt={`${currentSong.title} cover`}
               className="current-song-thumb"
             />
@@ -84,11 +93,15 @@ const Player = () => {
         {/* Player Controls */}
         <div className="player-controls">
           <div className="control-buttons">
-            <button className="control-btn prev" onClick={playPrevious}>⏮</button>
-            <button className="control-btn play-pause" onClick={togglePlay}>
-              {isPlaying ? '⏸' : '▶'}
+            <button className="control-btn prev" onClick={playPrevious}>
+              ⏮
             </button>
-            <button className="control-btn next" onClick={playNext}>⏭</button>
+            <button className="control-btn play-pause" onClick={togglePlay}>
+              {isPlaying ? "⏸" : "▶"}
+            </button>
+            <button className="control-btn next" onClick={playNext}>
+              ⏭
+            </button>
           </div>
 
           <div className="progress-container" onClick={handleProgressClick}>
@@ -101,7 +114,7 @@ const Player = () => {
         {/* Volume Controls */}
         <div className="volume-controls">
           <button className="volume-btn" onClick={toggleMute}>
-            {isMuted ? '🔇' : '🔊'}
+            {isMuted ? "🔇" : "🔊"}
           </button>
           <input
             type="range"

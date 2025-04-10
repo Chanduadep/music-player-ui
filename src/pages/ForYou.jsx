@@ -11,8 +11,9 @@ const ForYou = () => {
   const { currentSong, colorScheme } = useContext(PlayerContext);
 
   const backgroundStyle = colorScheme
-    ? getGradientFromImage(colorScheme)
-    : { background: "linear-gradient(to bottom, #f0f0f0 0%, #d0d0d0 100%)" };
+  ? { background: getGradientFromImage(colorScheme) }
+  : { background: "linear-gradient(to bottom, #f0f0f0 0%, #d0d0d0 100%)" };
+
 
   return (
     <div className="for-you-page" style={{ background: backgroundStyle }}>
